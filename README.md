@@ -23,6 +23,7 @@ pip install -r requirements.txt
 4. Add to head of file "yolov5\detect.py" :
 
 import pathlib
+
 pathlib.PosixPath = pathlib.WindowsPath
 
 5. Run file:  GUI.py
