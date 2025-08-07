@@ -1,0 +1,6 @@
+datasets/
+yolov5/
+venv/
+__pycache__/
+*.onnx
+*.log
