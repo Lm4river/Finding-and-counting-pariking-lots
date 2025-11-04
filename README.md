@@ -1,6 +1,6 @@
 # My YOLOv5 Project
 
-YOLOv5: Mô hình phát hiện đối tượng thời gian thực, dùng để xác định vị trí biển số xe trong ảnh.
+YOLOv5: Mô hình phát hiện đối tượng thời gian thực, dùng để xác định vị trí ô trống trong ảnh.
 
 PyTorch: Framework deep learning phục vụ huấn luyện và triển khai mô hình YOLOv5 và VietOCR.
 
@@ -12,7 +12,7 @@ Tkinter: Xây dựng giao diện người dùng (GUI) để tải ảnh, hiển 
 
 # Requirements
 
-- Other dependencies in `requirements.txt`
+     Other dependencies in `requirements.txt`
 
 # Installation
 
@@ -20,24 +20,23 @@ Tkinter: Xây dựng giao diện người dùng (GUI) để tải ảnh, hiển 
 
 2. Create virtual environment:
 
-python -m venv venv
-venv\Scripts\activate  
+    python -m venv venv
+    venv\Scripts\activate  
 
-Install dependencies:
-pip install -r requirements.txt
+    Install dependencies:
+    pip install -r requirements.txt
 
 3. Clone YOLOv5:  git clone https://github.com/ultralytics/yolov5.git
 
 4. Add to head of file "yolov5\detect.py" :
 
-import pathlib
+    import pathlib
 
 pathlib.PosixPath = pathlib.WindowsPath
 
-Thay dòng trong file yolov5/detect.py:  from ultralytics.utils.plotting import Annotator, colors, save_one_box
+    Thay dòng trong file yolov5/detect.py:  from ultralytics.utils.plotting import Annotator, colors, save_one_box
              
-Dòng thay thế:                          from utils.plots import Annotator, colors, save_one_box
+    Dòng thay thế:                          from utils.plots import Annotator, colors, save_one_box
 
-(Vì yolov5 vừa thay đổi cấu trúc ultralytics nên em fix bằng cách này )
 
 5. Run file:  GUI.py

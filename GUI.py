@@ -13,7 +13,7 @@ def run_detection(image_path):
         shutil.rmtree(output_dir)
 
     # Dòng lệnh đúng đường dẫn detect.py
-    cmd = f"python yolov5/detect.py --weights best.pt --img 640 --conf 0.3 --source \"{image_path}\" --save-txt"
+    cmd = f"python yolov5/detect.py --weights best896.pt --img 640 --conf 0.3 --source \"{image_path}\" --save-txt"
     print("Running command:", cmd)
     subprocess.run(cmd, shell=True)
 
@@ -32,7 +32,7 @@ def run_detection(image_path):
         with open(txt_file, 'r') as f:
             for line in f:
                 class_id = int(line.split()[0])
-                if class_id == 1:  # sửa theo class unoccupied của bạn
+                if class_id == 2:  
                     count_unoccupied += 1
 
     return output_image_path, count_unoccupied
